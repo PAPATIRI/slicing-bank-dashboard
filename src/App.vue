@@ -9,7 +9,7 @@ import TopNav from './components/TopNav.vue'
     <aside class="bg-white col-span-2">
       <SidebarNav />
     </aside>
-    <div class="col-span-10">
+    <div class="col-span-10 flex flex-col">
       <TopNav />
       <RouterView />
     </div>

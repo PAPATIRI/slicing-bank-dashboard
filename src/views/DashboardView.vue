@@ -1,4 +1,6 @@
 <script lang="ts" setup></script>
 <template>
-  <p>dashboard view</p>
+  <main class="bg-[#F5F7FA] flex-1 px-10 py-6">
+    <p>dashboard view</p>
+  </main>
 </template>

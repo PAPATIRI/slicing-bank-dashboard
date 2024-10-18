@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { defineProps } from 'vue'
 import type { DefineComponent } from 'vue'
 import type { RouteLocationRaw } from 'vue-router'
-const props = defineProps({
+
+defineProps({
   title: String,
   to: {
     type: String as () => RouteLocationRaw,

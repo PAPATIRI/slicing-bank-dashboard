@@ -26,9 +26,11 @@ const route = useRoute()
 const isActive = (path: string) => route.path == path
 </script>
 <template>
-  <nav class="flex flex-col">
+  <nav class="flex flex-col bg-white">
     <div class="h-[100px] flex justify-center items-center">
-      <LogoIcon />
+      <RouterLink to="/">
+        <LogoIcon />
+      </RouterLink>
     </div>
     <NavItem
       title="Dashboard"

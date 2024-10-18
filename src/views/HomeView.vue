@@ -3,7 +3,7 @@ import TheWelcome from '../components/TheWelcome.vue'
 </script>
 
 <template>
-  <main>
+  <main class="bg-[#F5F7FA]">
     <TheWelcome />
   </main>
 </template>
