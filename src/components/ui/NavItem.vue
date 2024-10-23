@@ -27,7 +27,9 @@ defineProps({
       ]"
     >
       <component :is="icon" class="mb-1 mr-4" />
-      {{ title }}</RouterLink
-    >
+      <p class="sm:hidden lg:block">
+        {{ title }}
+      </p>
+    </RouterLink>
   </div>
 </template>

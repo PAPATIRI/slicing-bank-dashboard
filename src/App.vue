@@ -6,10 +6,10 @@ import TopNav from './components/TopNav.vue'
 
 <template>
   <div class="grid grid-cols-12 h-screen">
-    <aside class="bg-white col-span-2">
+    <aside class="bg-white col-span-1 lg:col-span-2">
       <SidebarNav />
     </aside>
-    <div class="col-span-10 flex flex-col">
+    <div class="col-span-11 lg:col-span-10 flex flex-col">
       <TopNav />
       <RouterView />
     </div>
