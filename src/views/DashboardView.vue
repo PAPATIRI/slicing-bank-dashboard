@@ -6,6 +6,7 @@ import ChartLine from '@/components/ui/ChartLine.vue'
 import ChartPie from '@/components/ui/ChartPie.vue'
 import CreditCard from '@/components/ui/CreditCard.vue'
 </script>
+
 <template>
   <main class="bg-[#F5F7FA] px-10 py-6">
     <div class="grid grid-cols-12 gap-[30px] mb-6">

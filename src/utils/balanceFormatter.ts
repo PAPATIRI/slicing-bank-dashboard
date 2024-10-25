@@ -15,3 +15,14 @@ export const formatBalance = (balance: number): string => {
     return `+${formatter.format(balance)}` // Format and add positive sign
   }
 }
+
+export const formatBalanceNormal = (balance: number): string => {
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  })
+
+  return `${formatter.format(Math.abs(balance))}`
+}

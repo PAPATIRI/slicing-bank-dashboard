@@ -9,7 +9,9 @@ export default defineConfig({
   plugins: [
     vue(),
     svgLoader({
-      defaultImport: 'component',
+      svgoConfig: {
+        multipass: true,
+      },
     }),
   ],
   resolve: {

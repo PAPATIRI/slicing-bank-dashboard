@@ -30,13 +30,11 @@ const chartData = {
       label: 'Balance',
       data: [150, 300, 450, 800, 200, 550, 600],
       borderColor: 'rgb(65, 105, 225)',
-      // backgroundColor: 'rgba(45, 96, 255, 0.2)',
       backgroundColor: context => {
         const bgColor = ['rgba(45, 96, 255, 0.4)', 'rgba(45, 96, 255, 0)']
         if (!context.chart.chartArea) {
           return
         }
-        console.log(context.chart.chartArea)
         const {
           ctx,
           data,

@@ -46,91 +46,95 @@ const tableDatas = [
       class="table-auto border border-collapse border-transparent w-full text-left"
     >
       <thead>
-        <th
-          class="text-medium-blue-pallete capitalize text-base font-medium pb-[30px]"
-        >
-          description
-        </th>
-        <th
-          class="text-medium-blue-pallete capitalize text-base font-medium pb-[30px]"
-        >
-          transaction id
-        </th>
-        <th
-          class="text-medium-blue-pallete capitalize text-base font-medium pb-[30px]"
-        >
-          type
-        </th>
-        <th
-          class="text-medium-blue-pallete capitalize text-base font-medium pb-[30px]"
-        >
-          card
-        </th>
-        <th
-          class="text-medium-blue-pallete capitalize text-base font-medium pb-[30px]"
-        >
-          date
-        </th>
-        <th
-          class="text-medium-blue-pallete capitalize text-base font-medium pb-[30px]"
-        >
-          amount
-        </th>
-        <th
-          class="text-medium-blue-pallete capitalize text-base font-medium pb-[30px]"
-        >
-          receipt
-        </th>
+        <tr>
+          <th
+            class="text-medium-blue-pallete capitalize text-base font-medium pb-[30px]"
+          >
+            description
+          </th>
+          <th
+            class="text-medium-blue-pallete capitalize text-base font-medium pb-[30px]"
+          >
+            transaction id
+          </th>
+          <th
+            class="text-medium-blue-pallete capitalize text-base font-medium pb-[30px]"
+          >
+            type
+          </th>
+          <th
+            class="text-medium-blue-pallete capitalize text-base font-medium pb-[30px]"
+          >
+            card
+          </th>
+          <th
+            class="text-medium-blue-pallete capitalize text-base font-medium pb-[30px]"
+          >
+            date
+          </th>
+          <th
+            class="text-medium-blue-pallete capitalize text-base font-medium pb-[30px]"
+          >
+            amount
+          </th>
+          <th
+            class="text-medium-blue-pallete capitalize text-base font-medium pb-[30px]"
+          >
+            receipt
+          </th>
+        </tr>
       </thead>
       <tbody v-for="data in tableDatas" :key="data.transactionId">
-        <td
-          class="gap-3 py-5 capitalize text-base text-gray-800 border-y-2 border-gray-200"
-        >
-          <span class="float-left mr-4 -mt-1">
-            <ArrowUp class="rotate-180" v-if="data.amount > 0" />
-            <ArrowUp v-else />
-          </span>
-          <span>
-            {{ data.description }}
-          </span>
-        </td>
-        <td
-          class="py-4 capitalize text-base text-gray-800 border-y-2 border-gray-200"
-        >
-          {{ data.transactionId }}
-        </td>
-        <td
-          class="py-4 capitalize text-base text-gray-800 border-y-2 border-gray-200"
-        >
-          {{ data.type }}
-        </td>
-        <td
-          class="py-4 capitalize text-base text-gray-800 border-y-2 border-gray-200"
-        >
-          {{ data.card }}
-        </td>
-        <td
-          class="py-4 capitalize text-base text-gray-800 border-y-2 border-gray-200"
-        >
-          {{ dateFormatter(data.date) }}
-        </td>
-        <td
-          :class="[
-            'py-4 capitalize text-base font-medium border-y-2 border-gray-200',
-            data.amount < 0 ? 'text-red-700' : 'text-green-700',
-          ]"
-        >
-          {{ formatBalance(data.amount) }}
-        </td>
-        <td
-          class="py-4 capitalize text-base text-gray-800 border-y-2 border-gray-200"
-        >
-          <button
-            class="border border-slate-700 rounded-full bg-white py-2 px-3"
+        <tr>
+          <td
+            class="gap-3 py-5 capitalize text-base text-gray-800 border-y-2 border-gray-200"
           >
-            download
-          </button>
-        </td>
+            <span class="float-left mr-4 -mt-1">
+              <ArrowUp class="rotate-180" v-if="data.amount > 0" />
+              <ArrowUp v-else />
+            </span>
+            <span>
+              {{ data.description }}
+            </span>
+          </td>
+          <td
+            class="py-4 capitalize text-base text-gray-800 border-y-2 border-gray-200"
+          >
+            {{ data.transactionId }}
+          </td>
+          <td
+            class="py-4 capitalize text-base text-gray-800 border-y-2 border-gray-200"
+          >
+            {{ data.type }}
+          </td>
+          <td
+            class="py-4 capitalize text-base text-gray-800 border-y-2 border-gray-200"
+          >
+            {{ data.card }}
+          </td>
+          <td
+            class="py-4 capitalize text-base text-gray-800 border-y-2 border-gray-200"
+          >
+            {{ dateFormatter(data.date) }}
+          </td>
+          <td
+            :class="[
+              'py-4 capitalize text-base font-medium border-y-2 border-gray-200',
+              data.amount < 0 ? 'text-red-700' : 'text-green-700',
+            ]"
+          >
+            {{ formatBalance(data.amount) }}
+          </td>
+          <td
+            class="py-4 capitalize text-base text-gray-800 border-y-2 border-gray-200"
+          >
+            <button
+              class="border border-slate-700 rounded-full bg-white py-2 px-3"
+            >
+              download
+            </button>
+          </td>
+        </tr>
       </tbody>
     </table>
     <div class="pt-4 pb-2 self-end flex items-center gap-3">
